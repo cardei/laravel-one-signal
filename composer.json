@@ -1,0 +1,44 @@
+{
+  "name": "cardei/laravel-one-signal",
+  "description": "Laravel Wrapper for OneSignal Push",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "php",
+    "one-signal",
+    "push",
+    "notification"
+  ],
+  "authors": [
+    {
+      "name": "M. Cardei",
+      "email": "catalin@cardei.studio"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "mockery/mockery": "^1.4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cardei\\OneSignal\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "\\Cardei\\OneSignal\\OneSignalServiceProvider"
+      ],
+      "aliases": {
+        "OneSignal": "Cardei\\OneSignal\\OneSignal"
+      }
+    }
+  }
+}
